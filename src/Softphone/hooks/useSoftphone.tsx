@@ -1,0 +1,65 @@
+import {
+  useSoftphoneDispatch,
+  useSoftphone as _useSoftphone,
+} from "../context/Softphone/context";
+import { CallAction, ContactInput } from "../types";
+
+export const useSoftphone = () => {
+  const { device, call, contact, contactSelected, status } = _useSoftphone();
+  const {
+    selectContact,
+    makeCall: _makeCall,
+    updateCallAction: _updateCallAction,
+    setLedIndicator,
+    setStatus,
+  } = useSoftphoneDispatch();
+
+  const lookupContact = (contactToLookup: ContactInput) => {
+    selectContact(contactToLookup);
+  };
+
+  const makeCall = ({
+    contact,
+    params,
+  }: {
+    contact?: ContactInput;
+    params?: Record<string, unknown>;
+  }) => {
+    _makeCall(contact, params);
+  };
+
+  const updateCallAction = (
+    callActionId: CallAction["id"],
+    { loading, disabled }: { loading?: boolean; disabled?: boolean }
+  ) => {
+    _updateCallAction(callActionId, { loading, disabled });
+  };
+
+  const displayOnCallView = (contact: ContactInput) => {
+    selectContact(contact, "on-call");
+  };
+
+  const displayOnRingingView = (contact: ContactInput) => {
+    selectContact(contact, "ringing");
+  };
+
+  const stopLedIndicator = () => {
+    setLedIndicator(false);
+  };
+
+  return {
+    isBusy: Boolean(device?.isBusy),
+    state: device?.state,
+    status,
+    currentCall: call,
+    registeredContact: contact,
+    contactSelected,
+    setStatus,
+    lookupContact,
+    makeCall,
+    updateCallAction,
+    displayOnCallView,
+    displayOnRingingView,
+    stopLedIndicator,
+  };
+};

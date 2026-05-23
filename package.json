@@ -1,0 +1,92 @@
+{
+  "name": "@arieldrio/softphone",
+  "version": "0.0.57",
+  "description": "Twilio-powered React softphone component.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArielDelRio/softphone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArielDelRio/softphone/issues"
+  },
+  "homepage": "https://ArielDelRio.github.io/softphone/",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/Softphone/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/Softphone/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:lib": "vite build --config vite.config.softphone.ts",
+    "prepublishOnly": "npm run build:lib",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "release:patch": "npm version patch",
+    "release:minor": "npm version minor",
+    "release:major": "npm version major"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@fontsource/roboto": "^5.0.12",
+    "@twilio/voice-sdk": "^2.10.2",
+    "libphonenumber-js": "^1.10.60"
+  },
+  "peerDependencies": {
+    "@emotion/react": ">=11",
+    "@emotion/styled": ">=11",
+    "@mui/icons-material": ">=5",
+    "@mui/material": ">=5",
+    "@mui/system": ">=5",
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@types/react": "^17.0.76",
+    "@types/react-dom": "^17.0.25",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@mui/icons-material": "^5.15.14",
+    "@mui/material": "^5.15.15",
+    "@mui/system": "^5.15.15",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "gh-pages": "^6.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4",
+    "vite-plugin-dts": "^3.8.1"
+  },
+  "keywords": [
+    "react",
+    "softphone",
+    "twilio",
+    "voice",
+    "voip",
+    "mui"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.11.0"
+  },
+  "volta": {
+    "node": "20.19.0"
+  }
+}
