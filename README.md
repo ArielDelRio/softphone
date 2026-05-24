@@ -2,6 +2,8 @@
 
 ## Previews
 
+These previews are recorded from a demo host app; UI labels shown belong to that demo environment.
+
 ### Outbound call (mute / hold / transfer)
 
 <p>
