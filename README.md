@@ -4,17 +4,19 @@
 
 These previews are recorded from a demo host app; UI labels shown belong to that demo environment.
 
-### Outbound call (mute / hold / transfer)
+<details open>
+  <summary><strong>Outbound call (mute / hold / transfer)</strong></summary>
+  <p>
+    <img src="assets/preview-outbound.gif" width="900" style="max-width: 100%; height: auto;" alt="Outbound call preview" />
+  </p>
+</details>
 
-<p>
-  <img src="assets/preview-outbound.gif" width="900" style="max-width: 100%; height: auto;" alt="Outbound call preview" />
-</p>
-
-### Inbound call (IVR → CS group)
-
-<p>
-  <img src="assets/preview-inbound.gif" width="900" style="max-width: 100%; height: auto;" alt="Inbound call preview" />
-</p>
+<details open>
+  <summary><strong>Inbound call (IVR → CS group)</strong></summary>
+  <p>
+    <img src="assets/preview-inbound.gif" width="900" style="max-width: 100%; height: auto;" alt="Inbound call preview" />
+  </p>
+</details>
 
 The `Softphone` component is a comprehensive solution for call management within your React applications. It provides a rich and extensible interface for making and managing calls. Additionally, it includes options to customize the appearance and behavior of the component. You can see a live demo [here](https://ArielDelRio.github.io/softphone/).
 
