@@ -40,7 +40,7 @@ npm run dev
 
 ## Project layout
 
-- **Demo app (Vite)**: the interactive UI you see in the previews (`npm run dev`, `npm run build`).
+- **Demo app (Vite)**: a local development harness for the component (`npm run dev`, `npm run build`).
 - **Library build**: the reusable `Softphone` component bundle (`npm run build:lib`).
 
 ## Features
