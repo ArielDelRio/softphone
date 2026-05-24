@@ -20,6 +20,29 @@ These previews are recorded from a demo host app; UI labels shown belong to that
 
 The `Softphone` component is a comprehensive solution for call management within your React applications. It provides a rich and extensible interface for making and managing calls. Additionally, it includes options to customize the appearance and behavior of the component. You can see a live demo [here](https://ArielDelRio.github.io/softphone/).
 
+## Quick start (demo app)
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Configure env vars (see `.env.example`):
+
+- `SOFTPHONE_TWILIO_FUNCTIONS_DOMAIN` must point to an endpoint that can mint Twilio **Access Tokens** (Voice grant).
+
+3. Run locally:
+
+```bash
+npm run dev
+```
+
+## Project layout
+
+- **Demo app (Vite)**: the interactive UI you see in the previews (`npm run dev`, `npm run build`).
+- **Library build**: the reusable `Softphone` component bundle (`npm run build:lib`).
+
 ## Features
 
 - **Call Management**: Make calls and manage their status.
@@ -53,6 +76,8 @@ Proprietary / `UNLICENSED` — see `LICENSE`. Redistribution and modification ar
 - [MUI Material v5.15.15](https://www.npmjs.com/package/@mui/material) - Provides Material Design UI components.
 - [Twilio Voice SDK v2.10.2](https://www.npmjs.com/package/@twilio/voice-sdk) - Allows making and receiving phone calls directly in your apps.
 - [libphonenumber-js v1.10.60](https://www.npmjs.com/package/libphonenumber-js) - A library for parsing, formatting, and validating international phone numbers.
+
+**Important:** without a valid Twilio Access Token (Voice grant), the softphone can render but will not be able to register, make calls, or receive calls.
 
 ## Usage
 
