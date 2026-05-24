@@ -56,6 +56,8 @@ Below is a basic example of how to use the `Softphone` component:
 
 First need to use the SoftphoneProvider to wrap the Softphone component.
 
+This component uses the Twilio Voice SDK under the hood. To make/receive calls, you must provide a valid Twilio **Access Token** (with the Voice grant) via the required `onFetchToken` handler.
+
 ```jsx
 import { SoftphoneProvider } from "@arieldrio/softphone";
 
