@@ -13,6 +13,7 @@ dist-ssr
 *.local
 coverage
 *.tgz
+assets/*.mp4
 
 # Editor directories and files
 .vscode/*
