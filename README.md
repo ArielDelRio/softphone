@@ -12,10 +12,10 @@
   <tbody>
     <tr>
       <td>
-        <img src="assets/preview-outbound.gif" width="520" alt="Outbound call preview" />
+        <img src="assets/preview-outbound.gif" width="600" alt="Outbound call preview" />
       </td>
       <td>
-        <img src="assets/preview-inbound.gif" width="520" alt="Inbound call preview" />
+        <img src="assets/preview-inbound.gif" width="600" alt="Inbound call preview" />
       </td>
     </tr>
   </tbody>
